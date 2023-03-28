@@ -1,0 +1,95 @@
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+}
+.navbar a{
+  text-decoration: none;
+  color: inherit;
+}
+.list{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+#toggler, .navbar label{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu{
+    max-height: 100%
+  }
+}
+
+.body{
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.heading{
+  text-decoration: underline;
+  padding: inherit;
+  margin: auto;
+  color: black;
+}
+.column{
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin: 10px;
+}
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.bottombar{
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.bottombar a{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.bottombar a:hover{
+  background-color: #ddd;
+  color: black;
+}
+.bottombar a.active{
+  background-color: #04AA6D;
+  color: white;
+}
+.quotes{
+  padding: 10px;
+}
+.pictures p{
+  text-align: center;
+  text-decoration: underline;
+}

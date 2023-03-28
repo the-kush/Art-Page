@@ -1,0 +1,108 @@
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  text-align: right;
+  margin: 20px;
+}
+.navbar a{
+  text-decoration: none;
+  color: inherit;
+}
+.Logo{
+  margin-right: 50px;
+}
+
+.list{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+#toggler, .navbar label{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu{
+    max-height: 100%
+  }
+}
+.body{
+  font-family: arial, Heletica, sans-serif;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+.column{
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0px;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+.about-section{
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+.container{
+  padding: 0 16px;
+}
+.container::after, .row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.title{
+  color: grey;
+}
+.button{
+  border: none;
+  outline: 0;
+  display: inline-inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover{
+  background-color: #555;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.team{
+  padding: 15px;
+  text-decoration: underline;
+  margin: auto;
+}
